@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Types="*res://script/global_types.gd"
+Nodes="*res://script/global_nodes.gd"
 
 [input]
 
@@ -35,6 +36,7 @@ move_right={
 [layer_names]
 
 2d_physics/layer_2="chantier"
+2d_physics/layer_3="batiment"
 
 [rendering]
 
