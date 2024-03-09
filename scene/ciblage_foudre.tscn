@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bfrs5k7aqy8sy"]
+[gd_scene load_steps=4 format=3 uid="uid://bfrs5k7aqy8sy"]
 
 [ext_resource type="Script" path="res://script/ciblage_foudre.gd" id="1_7vtmf"]
+[ext_resource type="Texture2D" uid="uid://3hyb0v5ecqeq" path="res://sprite/ciblage_foudre.png" id="2_cy33g"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b5d8h"]
 radius = 2.0
@@ -15,3 +16,8 @@ max_grow = 40.0
 rotation = 1.5708
 shape = SubResource("CircleShape2D_b5d8h")
 debug_color = Color(1, 0.966667, 0, 0.419608)
+
+[node name="CiblageFoudre" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.658824)
+scale = Vector2(0.004, 0.004)
+texture = ExtResource("2_cy33g")
