@@ -9,4 +9,4 @@ func _ready():
 
 
 func _on_timer_timeout():
-	personnage.direction *= [-1, 1].pick_random()
+	personnage.direction = [-1, 1, personnage.direction].pick_random()

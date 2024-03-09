@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfrs5k7aqy8sy"]
+
+[ext_resource type="Script" path="res://script/ciblage_foudre.gd" id="1_7vtmf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b5d8h"]
+radius = 2.0
+
+[node name="CiblageFoudre" type="Area2D"]
+collision_layer = 0
+collision_mask = 20
+script = ExtResource("1_7vtmf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CircleShape2D_b5d8h")
+debug_color = Color(1, 0.966667, 0, 0.419608)

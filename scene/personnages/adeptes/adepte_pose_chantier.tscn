@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://f4bj033thorm" path="res://scene/personnages/modes_deplacements/mode_deplacement_civil.tscn" id="4_f0d4c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ye7ry"]
+radius = 5.0
 
 [node name="AdeptePoseChantier" instance=ExtResource("1_kthtd")]
 
@@ -14,7 +15,7 @@ shape = SubResource("CircleShape2D_ye7ry")
 debug_color = Color(0, 0.835294, 0.803922, 0.807843)
 
 [node name="PoseChantier" parent="." index="1" instance=ExtResource("2_26eel")]
-position = Vector2(0, 10)
+position = Vector2(0, 5)
 chantier = ExtResource("3_o4u12")
 
 [node name="ModeDeplacementCivil" parent="." index="2" node_paths=PackedStringArray("personnage") instance=ExtResource("4_f0d4c")]

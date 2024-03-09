@@ -2,6 +2,10 @@ extends Area2D
 
 @export var chantier : PackedScene
 @onready var timer := $Timer
+var counter := 0 :
+	set(val):
+		counter = val
+		timer.paused = counter > 0
 
 func poser_chantier():
 	var c = chantier.instantiate()
@@ -9,16 +13,16 @@ func poser_chantier():
 	Nodes.node_batiments.add_child(c)
 
 func _on_area_entered(area):
-	timer.paused = true
+	counter += 1
 
 func _on_area_exited(area):
-	timer.paused = false
+	counter -= 1
 
 func _on_body_entered(body):
-	timer.paused = true
+	counter += 1
 
 func _on_body_exited(body):
-	timer.paused = false
+	counter -= 1
 
 func _on_timer_timeout():
 	poser_chantier()

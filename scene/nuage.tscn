@@ -1,20 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbccirbv3hfcs"]
+[gd_scene load_steps=4 format=3 uid="uid://bbccirbv3hfcs"]
 
 [ext_resource type="Script" path="res://script/nuage.gd" id="1_fn27w"]
+[ext_resource type="PackedScene" uid="uid://cipx2fu5v6v3s" path="res://scene/eclair.tscn" id="2_kxax6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_giho4"]
 radius = 20.0
 height = 60.0
 
-[node name="Nuage" type="Node2D"]
+[node name="Nuage" type="Node2D" node_paths=PackedStringArray("eclair")]
 script = ExtResource("1_fn27w")
+eclair = NodePath("altitude/Eclair")
 
 [node name="altitude" type="Area2D" parent="."]
 position = Vector2(0, -900)
+collision_layer = 32
+collision_mask = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="altitude"]
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_giho4")
+
+[node name="Eclair" parent="altitude" instance=ExtResource("2_kxax6")]
 
 [node name="TimerDebutPluie" type="Timer" parent="."]
 wait_time = 10.0

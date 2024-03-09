@@ -4,12 +4,16 @@ extends Line2D
 class_name Eclair
 
 @export_range(0.45,0.75) var ratio = 0.6
-@export var end_point := Vector2.ZERO
+@onready var collision_shape_foudre := $ZoneFoudre/CollisionShape2D
 
 func _ready():
 	visible = false
 
-func start():
+func start(gpos):
+	var end_point = (gpos - global_position).rotated(-global_rotation)
+	collision_shape_foudre.position = end_point
+	collision_shape_foudre.disabled = false
+	
 	visible = true
 	points[0] = Vector2.ZERO
 	points[3] = end_point
@@ -26,3 +30,8 @@ func start():
 	tween.tween_property(gradient, "offsets", new_offsets, 0.1)
 	tween.tween_interval(0.1)
 	tween.tween_callback(func(): visible=false)
+	tween.tween_callback(func(): collision_shape_foudre.disabled = true)
+
+
+func _on_zone_foudre_body_entered(body):
+	body.subir_foudre(1)

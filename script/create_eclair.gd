@@ -4,5 +4,4 @@ extends Node2D
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
-		eclair.end_point = get_global_mouse_position() - eclair.global_position
-		eclair.start()
+		eclair.start(get_global_mouse_position())

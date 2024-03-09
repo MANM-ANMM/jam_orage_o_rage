@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://f4bj033thorm" path="res://scene/personnages/modes_deplacements/mode_deplacement_civil.tscn" id="3_jxjue"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c6s6m"]
+radius = 5.0
 
 [node name="AdepteConstructeur" instance=ExtResource("1_gbo7i")]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cipx2fu5v6v3s"]
+[gd_scene load_steps=5 format=3 uid="uid://cipx2fu5v6v3s"]
 
 [ext_resource type="Script" path="res://script/eclair.gd" id="1_s7ocr"]
 
@@ -10,6 +10,9 @@ point_count = 2
 interpolation_color_space = 1
 colors = PackedColorArray(1, 0.960784, 0.2, 1, 1, 0.960784, 0.2, 0)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_1blt0"]
+radius = 6.0
+
 [node name="Eclair" type="Line2D"]
 visible = false
 points = PackedVector2Array(0, 0, -45.0727, 190.665, 59.4777, 135.55, 14.405, 326.215)
@@ -18,4 +21,12 @@ width_curve = SubResource("Curve_efufn")
 default_color = Color(1, 0.960784, 0.2, 1)
 gradient = SubResource("Gradient_uge4l")
 script = ExtResource("1_s7ocr")
-end_point = Vector2(14.405, 326.215)
+
+[node name="ZoneFoudre" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZoneFoudre"]
+shape = SubResource("CircleShape2D_1blt0")
+
+[connection signal="body_entered" from="ZoneFoudre" to="." method="_on_zone_foudre_body_entered"]
