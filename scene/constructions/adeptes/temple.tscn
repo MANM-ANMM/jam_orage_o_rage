@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://do855p11p6w40"]
+
+[ext_resource type="PackedScene" uid="uid://cew563e1kmwm7" path="res://scene/constructions/batiment.tscn" id="1_7kyrf"]
+[ext_resource type="Texture2D" uid="uid://c0iegaufwxl7r" path="res://icon.svg" id="2_ofr8p"]
+
+[node name="Temple" instance=ExtResource("1_7kyrf")]
+
+[node name="Icon" type="Sprite2D" parent="." index="0"]
+modulate = Color(1, 0.8, 0.0705882, 1)
+texture = ExtResource("2_ofr8p")

@@ -1,5 +1,7 @@
 extends Area2D
 
+class_name Chantier
+
 @export var peuple : Types.Peuple
 @export var batiment : PackedScene
 var niveau_construction := 0 :
@@ -16,3 +18,7 @@ func spawn_batiment():
 	bat.rotation = rotation
 	add_sibling(bat)
 	queue_free()
+
+func _ready():
+	var up_direction = (get_parent().global_position - global_position).normalized()
+	rotation = up_direction.rotated(-PI/2).angle()

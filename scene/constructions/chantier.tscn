@@ -6,6 +6,8 @@
 radius = 25.0
 
 [node name="chantier" type="Area2D"]
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("1_g1s76")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
