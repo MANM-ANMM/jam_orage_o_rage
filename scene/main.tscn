@@ -22,7 +22,7 @@ script = ExtResource("1_rtxvy")
 ciblage_foudre = NodePath("../../CiblageFoudre")
 
 [node name="Camera2D" type="Camera2D" parent="Planete/Player"]
-position = Vector2(0, -800)
+position = Vector2(0, -820)
 ignore_rotation = false
 zoom = Vector2(2.5, 2.5)
 
@@ -33,10 +33,12 @@ points = PackedVector2Array(0, 0, -60.1731, 186.45, 74.5781, 139.765, 14.405, 32
 [node name="batiments" type="Node2D" parent="Planete"]
 
 [node name="ChantierTemple" parent="Planete/batiments" instance=ExtResource("5_f7pyk")]
-position = Vector2(208, -792)
+position = Vector2(160, -788)
+rotation = 0.260103
 
 [node name="Temple" parent="Planete/batiments" instance=ExtResource("6_556qx")]
-position = Vector2(327, -736)
+position = Vector2(326, -734)
+rotation = 0.431243
 
 [node name="Maison" parent="Planete/batiments" instance=ExtResource("7_rnyke")]
 position = Vector2(691, 404)

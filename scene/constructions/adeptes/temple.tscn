@@ -14,7 +14,6 @@ size = Vector2(51.2, 51.2)
 [node name="Temple" instance=ExtResource("1_7kyrf")]
 
 [node name="Icon" type="Sprite2D" parent="." index="0"]
-modulate = Color(1, 0.8, 0.0705882, 1)
 position = Vector2(1, -26)
 scale = Vector2(0.06, 0.06)
 texture = ExtResource("2_dg4lf")

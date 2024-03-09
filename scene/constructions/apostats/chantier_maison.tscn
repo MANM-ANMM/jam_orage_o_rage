@@ -1,8 +1,40 @@
-[gd_scene load_steps=3 format=3 uid="uid://bm17gy6assuyj"]
+[gd_scene load_steps=8 format=3 uid="uid://bm17gy6assuyj"]
 
 [ext_resource type="PackedScene" uid="uid://duk6e7jesc215" path="res://scene/constructions/chantier.tscn" id="1_n7f7m"]
 [ext_resource type="PackedScene" uid="uid://beksk6ijkp4rg" path="res://scene/constructions/apostats/maison.tscn" id="2_gc718"]
+[ext_resource type="Texture2D" uid="uid://c68kgp6bhhb6c" path="res://sprite/construction/maison/0.png" id="3_og5f0"]
+[ext_resource type="Texture2D" uid="uid://ctgvub0vg76ty" path="res://sprite/construction/maison/1.png" id="4_rmhhk"]
+[ext_resource type="Texture2D" uid="uid://blxybf6q4ugh0" path="res://sprite/construction/maison/2.png" id="5_nkqv2"]
+[ext_resource type="Texture2D" uid="uid://u8obiebxh5pv" path="res://sprite/construction/maison/3.png" id="6_3xrj8"]
 
-[node name="ChantierMaison" instance=ExtResource("1_n7f7m")]
+[sub_resource type="SpriteFrames" id="SpriteFrames_hobik"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_og5f0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rmhhk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nkqv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3xrj8")
+}],
+"loop": true,
+"name": &"chantier_maison",
+"speed": 5.0
+}]
+
+[node name="ChantierMaison" node_paths=PackedStringArray("animated_sprite") instance=ExtResource("1_n7f7m")]
 peuple = 1
+animated_sprite = NodePath("AnimatedSprite2D")
 batiment = ExtResource("2_gc718")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+position = Vector2(0, -21)
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_hobik")
+animation = &"chantier_maison"
+speed_scale = 0.0
