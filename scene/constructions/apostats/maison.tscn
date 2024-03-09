@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://beksk6ijkp4rg"]
+
+[ext_resource type="PackedScene" uid="uid://cew563e1kmwm7" path="res://scene/constructions/batiment.tscn" id="1_bjm10"]
+[ext_resource type="PackedScene" uid="uid://d0bwyfmeukx0o" path="res://scene/constructions/generateur_personnage.tscn" id="2_uw54l"]
+[ext_resource type="PackedScene" uid="uid://byjervgatwfll" path="res://scene/personnages/apostats/apostat_pose_chantier.tscn" id="3_w4pw0"]
+[ext_resource type="PackedScene" uid="uid://nj36kcesrt1o" path="res://scene/personnages/apostats/apostat_constructeur.tscn" id="4_nonan"]
+[ext_resource type="PackedScene" uid="uid://b2yap1l1e3a52" path="res://scene/personnages/apostats/apostat_guerrier.tscn" id="5_3m6tv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hkpc4"]
+size = Vector2(50, 20)
+
+[node name="Maison" instance=ExtResource("1_bjm10")]
+peuple = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, -9)
+shape = SubResource("RectangleShape2D_hkpc4")
+debug_color = Color(0.458824, 0.447059, 1, 0.419608)
+
+[node name="GenerateurPoseChantier" parent="." index="1" instance=ExtResource("2_uw54l")]
+wait_time = 14.0
+scene_personnage = ExtResource("3_w4pw0")
+
+[node name="GenerateurConstructeur" parent="." index="2" instance=ExtResource("2_uw54l")]
+wait_time = 8.0
+scene_personnage = ExtResource("4_nonan")
+
+[node name="GenerateurGuerrier" parent="." index="3" instance=ExtResource("2_uw54l")]
+wait_time = 9.0
+scene_personnage = ExtResource("5_3m6tv")

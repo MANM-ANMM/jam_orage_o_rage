@@ -1,6 +1,7 @@
 extends Area2D
 
-@export var chantier : PackedScene
+@export_file var chantier_path : String
+@onready var chantier := load(chantier_path)
 @onready var timer := $Timer
 var counter := 0 :
 	set(val):

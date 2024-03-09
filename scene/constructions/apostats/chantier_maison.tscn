@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm17gy6assuyj"]
+
+[ext_resource type="PackedScene" uid="uid://duk6e7jesc215" path="res://scene/constructions/chantier.tscn" id="1_n7f7m"]
+[ext_resource type="PackedScene" uid="uid://beksk6ijkp4rg" path="res://scene/constructions/apostats/maison.tscn" id="2_gc718"]
+
+[node name="ChantierMaison" instance=ExtResource("1_n7f7m")]
+peuple = 1
+batiment = ExtResource("2_gc718")

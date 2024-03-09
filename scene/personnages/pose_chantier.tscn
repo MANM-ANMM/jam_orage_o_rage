@@ -12,6 +12,7 @@ script = ExtResource("1_kje72")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_dnwws")
+debug_color = Color(0, 0.6, 0.701961, 0.0117647)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 15.0

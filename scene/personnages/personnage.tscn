@@ -5,3 +5,8 @@
 [node name="personnage" type="CharacterBody2D"]
 collision_layer = 24
 script = ExtResource("1_vdp6i")
+
+[node name="TimerMort" type="Timer" parent="."]
+wait_time = 240.0
+
+[connection signal="timeout" from="TimerMort" to="." method="_on_timer_mort_timeout"]

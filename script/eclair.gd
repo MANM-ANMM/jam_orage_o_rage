@@ -1,4 +1,3 @@
-@tool
 extends Line2D
 
 class_name Eclair

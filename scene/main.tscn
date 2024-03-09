@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dpf6w7nhftecy"]
+[gd_scene load_steps=13 format=3 uid="uid://dpf6w7nhftecy"]
 
 [ext_resource type="PackedScene" uid="uid://cipx2fu5v6v3s" path="res://scene/eclair.tscn" id="1_i5wbh"]
 [ext_resource type="Script" path="res://script/main.gd" id="1_rtxvy"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bjyjef8wd85i3" path="res://scene/constructions/adeptes/chantier_temple.tscn" id="5_f7pyk"]
 [ext_resource type="PackedScene" uid="uid://b0rirvskmpf7i" path="res://scene/personnages/adeptes/adepte_constructeur.tscn" id="5_vn2rs"]
 [ext_resource type="PackedScene" uid="uid://do855p11p6w40" path="res://scene/constructions/adeptes/temple.tscn" id="6_556qx"]
+[ext_resource type="PackedScene" uid="uid://beksk6ijkp4rg" path="res://scene/constructions/apostats/maison.tscn" id="7_rnyke"]
 [ext_resource type="PackedScene" uid="uid://dgx465jyd2y5w" path="res://scene/personnages/adeptes/adepte_pose_chantier.tscn" id="7_xuc5i"]
 [ext_resource type="PackedScene" uid="uid://b2yap1l1e3a52" path="res://scene/personnages/apostats/apostat_guerrier.tscn" id="8_3brll"]
 [ext_resource type="PackedScene" uid="uid://bbccirbv3hfcs" path="res://scene/nuage.tscn" id="10_rjk7h"]
@@ -36,6 +37,10 @@ position = Vector2(208, -792)
 
 [node name="Temple" parent="Planete/batiments" instance=ExtResource("6_556qx")]
 position = Vector2(327, -736)
+
+[node name="Maison" parent="Planete/batiments" instance=ExtResource("7_rnyke")]
+position = Vector2(691, 404)
+rotation = 2.13105
 
 [node name="personnages" type="Node2D" parent="Planete"]
 

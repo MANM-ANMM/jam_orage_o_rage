@@ -5,12 +5,16 @@ class_name Nuage
 @onready var timer_pluie := $TimerPluie
 var pluie_on := false
 @export var eclair:Eclair
+const hauteur_nuages := -900
 
 var speed := PI/randf_range(80, 205)
 var sens :float= [1].pick_random()
 
 func _ready():
-	$altitude.position.y *= (1+speed+randf_range(-0.01, 0.01))
+	var tween = get_tree().create_tween()
+	var dest := Vector2(0, hauteur_nuages*(1+speed+randf_range(-0.01, 0.01)))
+	tween.tween_property($altitude, "position", dest, 0.8)
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

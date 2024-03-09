@@ -19,9 +19,21 @@ func _physics_process(delta):
 		
 		var nb : int = min(cibles.size(), nuages.size())
 		
-		cibles.sort_custom(func(c):return c.global_position.distance_squared_to(global_position))
+		cibles.sort_custom(compare_cibles)
+		nuages.sort_custom(compare_nuages)
 		
 		for i in range(nb):
 			nuages[i].lancer_eclair(cibles[i].global_position)
 		
 		ciblage_foudre.stop_growing()
+		
+		if nb == 0 and not nuages.is_empty():
+			nuages[0].lancer_eclair(ciblage_foudre.global_position)
+
+func compare_cibles(a, b):
+	var da = a.global_position.distance_squared_to(global_position)
+	var db = b.global_position.distance_squared_to(global_position)
+	return da>db
+
+func compare_nuages(a:Nuage, b:Nuage):
+	return a.pluie_on

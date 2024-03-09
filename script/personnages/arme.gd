@@ -12,5 +12,5 @@ func _on_timer_timeout():
 	infliger_degats()
 
 func infliger_degats():
-	for b in get_overlapping_bodies():
+	for b in get_overlapping_bodies().filter(func(b): return b.peuple!=peuple):
 		b.subir_degats(degats)

@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dgx465jyd2y5w"]
+[gd_scene load_steps=5 format=3 uid="uid://dgx465jyd2y5w"]
 
 [ext_resource type="PackedScene" uid="uid://b11tyoc8vc22q" path="res://scene/personnages/personnage.tscn" id="1_kthtd"]
 [ext_resource type="PackedScene" uid="uid://c8np6dwgtsylx" path="res://scene/personnages/pose_chantier.tscn" id="2_26eel"]
-[ext_resource type="PackedScene" uid="uid://bjyjef8wd85i3" path="res://scene/constructions/adeptes/chantier_temple.tscn" id="3_o4u12"]
 [ext_resource type="PackedScene" uid="uid://f4bj033thorm" path="res://scene/personnages/modes_deplacements/mode_deplacement_civil.tscn" id="4_f0d4c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ye7ry"]
@@ -16,7 +15,7 @@ debug_color = Color(0, 0.835294, 0.803922, 0.807843)
 
 [node name="PoseChantier" parent="." index="1" instance=ExtResource("2_26eel")]
 position = Vector2(0, 5)
-chantier = ExtResource("3_o4u12")
+chantier_path = "res://scene/constructions/adeptes/chantier_temple.tscn"
 
 [node name="ModeDeplacementCivil" parent="." index="2" node_paths=PackedStringArray("personnage") instance=ExtResource("4_f0d4c")]
 personnage = NodePath("..")

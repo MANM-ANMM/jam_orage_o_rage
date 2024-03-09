@@ -10,8 +10,8 @@ var do_grow:=false
 func _process(delta):
 	global_position = get_global_mouse_position()
 	if do_grow and scale.x<max_grow:
-		scale.x+=delta*grow_speed
-		scale.y+=delta*grow_speed
+		scale.x+=delta*grow_speed*log(scale.x*10+0.01)
+		scale.y = scale.x
 
 func stop_growing():
 	do_grow = false

@@ -1,16 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://do855p11p6w40"]
+[gd_scene load_steps=8 format=3 uid="uid://do855p11p6w40"]
 
 [ext_resource type="PackedScene" uid="uid://cew563e1kmwm7" path="res://scene/constructions/batiment.tscn" id="1_7kyrf"]
 [ext_resource type="Texture2D" uid="uid://c0iegaufwxl7r" path="res://icon.svg" id="2_ofr8p"]
+[ext_resource type="PackedScene" uid="uid://d0bwyfmeukx0o" path="res://scene/constructions/generateur_personnage.tscn" id="3_lm83y"]
+[ext_resource type="PackedScene" uid="uid://b0rirvskmpf7i" path="res://scene/personnages/adeptes/adepte_constructeur.tscn" id="4_iyjgr"]
+[ext_resource type="PackedScene" uid="uid://dgx465jyd2y5w" path="res://scene/personnages/adeptes/adepte_pose_chantier.tscn" id="5_3mbxn"]
+[ext_resource type="PackedScene" uid="uid://dm25jpukyt1hn" path="res://scene/constructions/generateur_nuages.tscn" id="6_m15nj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8sjmv"]
-size = Vector2(128, 128)
+size = Vector2(51.2, 51.2)
 
 [node name="Temple" instance=ExtResource("1_7kyrf")]
 
 [node name="Icon" type="Sprite2D" parent="." index="0"]
 modulate = Color(1, 0.8, 0.0705882, 1)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_ofr8p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 shape = SubResource("RectangleShape2D_8sjmv")
+
+[node name="Generateur_constructeur" parent="." index="2" instance=ExtResource("3_lm83y")]
+wait_time = 7.0
+scene_personnage = ExtResource("4_iyjgr")
+
+[node name="Generateur_poseur" parent="." index="3" instance=ExtResource("3_lm83y")]
+wait_time = 9.0
+scene_personnage = ExtResource("5_3mbxn")
+
+[node name="GenerateurNuages" parent="." index="4" instance=ExtResource("6_m15nj")]
+wait_time = 8.0

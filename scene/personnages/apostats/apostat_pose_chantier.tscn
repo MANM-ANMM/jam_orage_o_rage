@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://byjervgatwfll"]
+
+[ext_resource type="PackedScene" uid="uid://b11tyoc8vc22q" path="res://scene/personnages/personnage.tscn" id="1_uhwoc"]
+[ext_resource type="PackedScene" uid="uid://c8np6dwgtsylx" path="res://scene/personnages/pose_chantier.tscn" id="2_tdiab"]
+[ext_resource type="PackedScene" uid="uid://f4bj033thorm" path="res://scene/personnages/modes_deplacements/mode_deplacement_civil.tscn" id="3_yt62e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fgymf"]
+radius = 5.0
+
+[node name="ApostatPoseChantier" instance=ExtResource("1_uhwoc")]
+peuple = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_fgymf")
+debug_color = Color(0.839216, 0, 0.92549, 0.419608)
+
+[node name="PoseChantier" parent="." index="1" instance=ExtResource("2_tdiab")]
+position = Vector2(0, 5)
+chantier_path = "res://scene/constructions/apostats/chantier_maison.tscn"
+
+[node name="ModeDeplacementCivil" parent="." index="2" node_paths=PackedStringArray("personnage") instance=ExtResource("3_yt62e")]
+personnage = NodePath("..")

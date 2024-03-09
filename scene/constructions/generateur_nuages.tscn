@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm25jpukyt1hn"]
+
+[ext_resource type="Script" path="res://script/constructions/generateur_nuages.gd" id="1_o262i"]
+[ext_resource type="PackedScene" uid="uid://bbccirbv3hfcs" path="res://scene/nuage.tscn" id="2_bbsqb"]
+
+[node name="GenerateurNuages" type="Timer"]
+autostart = true
+script = ExtResource("1_o262i")
+scene_nuage = ExtResource("2_bbsqb")
+
+[connection signal="timeout" from="." to="." method="_on_timeout"]
