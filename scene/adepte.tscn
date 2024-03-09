@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0rirvskmpf7i"]
+
+[ext_resource type="PackedScene" uid="uid://b11tyoc8vc22q" path="res://scene/personnage.tscn" id="1_gbo7i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c6s6m"]
+
+[node name="adepte" instance=ExtResource("1_gbo7i")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_c6s6m")
+debug_color = Color(0.8, 0.745098, 0, 0.807843)

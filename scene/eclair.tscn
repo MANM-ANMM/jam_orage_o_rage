@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cipx2fu5v6v3s"]
+
+[ext_resource type="Script" path="res://script/eclair.gd" id="1_s7ocr"]
+
+[sub_resource type="Curve" id="Curve_efufn"]
+_data = [Vector2(0, 1), 0.0, -0.0400316, 0, 0, Vector2(1, 0.241758), -1.26708, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_uge4l"]
+interpolation_color_space = 1
+colors = PackedColorArray(1, 0.960784, 0.2, 1, 1, 0.960784, 0.2, 0)
+
+[node name="Eclair" type="Line2D"]
+visible = false
+points = PackedVector2Array(0, 0, -45.0727, 190.665, 59.4777, 135.55, 14.405, 326.215)
+width = 21.49
+width_curve = SubResource("Curve_efufn")
+default_color = Color(1, 0.960784, 0.2, 1)
+gradient = SubResource("Gradient_uge4l")
+script = ExtResource("1_s7ocr")
+end_point = Vector2(14.405, 326.215)

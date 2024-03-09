@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://3c52545gaet2"]
+
+[ext_resource type="Texture2D" uid="uid://c0iegaufwxl7r" path="res://icon.svg" id="1_gqmoa"]
+[ext_resource type="Script" path="res://script/player.gd" id="1_pfb8c"]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_pfb8c")
+
+[node name="altitude" type="Node2D" parent="."]
+position = Vector2(0, -900)
+
+[node name="Sprite2D" type="Sprite2D" parent="altitude"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_gqmoa")

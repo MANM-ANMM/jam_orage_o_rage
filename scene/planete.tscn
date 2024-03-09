@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cifcn4sdgqepo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bhx8o"]
+radius = 800.0
+
+[node name="Planete" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_bhx8o")
+debug_color = Color(0, 0.701961, 0.188235, 0.560784)

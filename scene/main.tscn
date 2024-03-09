@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://dpf6w7nhftecy"]
+
+[ext_resource type="PackedScene" uid="uid://cipx2fu5v6v3s" path="res://scene/eclair.tscn" id="1_i5wbh"]
+[ext_resource type="Script" path="res://script/create_eclair.gd" id="1_tcrdg"]
+[ext_resource type="PackedScene" uid="uid://cifcn4sdgqepo" path="res://scene/planete.tscn" id="3_bfyms"]
+[ext_resource type="PackedScene" uid="uid://3c52545gaet2" path="res://scene/player.tscn" id="4_d6ngq"]
+[ext_resource type="PackedScene" uid="uid://b0rirvskmpf7i" path="res://scene/adepte.tscn" id="5_vn2rs"]
+
+[node name="main" type="Node2D" node_paths=PackedStringArray("eclair")]
+script = ExtResource("1_tcrdg")
+eclair = NodePath("Planete/Player/Eclair")
+
+[node name="Planete" parent="." instance=ExtResource("3_bfyms")]
+
+[node name="Player" parent="Planete" instance=ExtResource("4_d6ngq")]
+
+[node name="Camera2D" type="Camera2D" parent="Planete/Player"]
+position = Vector2(0, -800)
+ignore_rotation = false
+zoom = Vector2(2.5, 2.5)
+
+[node name="Eclair" parent="Planete/Player" instance=ExtResource("1_i5wbh")]
+position = Vector2(0, -1000)
+points = PackedVector2Array(0, 0, -60.1731, 186.45, 74.5781, 139.765, 14.405, 326.215)
+
+[node name="personnages" type="Node2D" parent="Planete"]
+
+[node name="adepte" parent="Planete/personnages" instance=ExtResource("5_vn2rs")]
+position = Vector2(0, -819.12)
