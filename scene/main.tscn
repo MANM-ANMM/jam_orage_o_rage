@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dpf6w7nhftecy"]
+[gd_scene load_steps=11 format=3 uid="uid://dpf6w7nhftecy"]
 
 [ext_resource type="PackedScene" uid="uid://cipx2fu5v6v3s" path="res://scene/eclair.tscn" id="1_i5wbh"]
 [ext_resource type="Script" path="res://script/main.gd" id="1_rtxvy"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://do855p11p6w40" path="res://scene/constructions/adeptes/temple.tscn" id="6_556qx"]
 [ext_resource type="PackedScene" uid="uid://dgx465jyd2y5w" path="res://scene/personnages/adeptes/adepte_pose_chantier.tscn" id="7_xuc5i"]
 [ext_resource type="PackedScene" uid="uid://b2yap1l1e3a52" path="res://scene/personnages/apostats/apostat_guerrier.tscn" id="8_3brll"]
+[ext_resource type="PackedScene" uid="uid://bbccirbv3hfcs" path="res://scene/nuage.tscn" id="10_rjk7h"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_rtxvy")
@@ -44,3 +45,17 @@ position = Vector2(-48, -807)
 
 [node name="ApostatGuerrier" parent="Planete/personnages" instance=ExtResource("8_3brll")]
 position = Vector2(39, -811)
+
+[node name="nuages" type="Node2D" parent="Planete"]
+
+[node name="Nuage" parent="Planete/nuages" instance=ExtResource("10_rjk7h")]
+
+[node name="Nuage2" parent="Planete/nuages" instance=ExtResource("10_rjk7h")]
+
+[node name="Nuage3" parent="Planete/nuages" instance=ExtResource("10_rjk7h")]
+
+[node name="Nuage4" parent="Planete/nuages" instance=ExtResource("10_rjk7h")]
+
+[node name="Nuage5" parent="Planete/nuages" instance=ExtResource("10_rjk7h")]
+
+[node name="Nuage6" parent="Planete/nuages" instance=ExtResource("10_rjk7h")]

@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbccirbv3hfcs"]
+
+[ext_resource type="Script" path="res://script/nuage.gd" id="1_fn27w"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_giho4"]
+radius = 20.0
+height = 60.0
+
+[node name="Nuage" type="Node2D"]
+script = ExtResource("1_fn27w")
+
+[node name="altitude" type="Area2D" parent="."]
+position = Vector2(0, -900)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="altitude"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_giho4")
+
+[node name="TimerDebutPluie" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[node name="TimerPluie" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="timeout" from="TimerDebutPluie" to="." method="_on_timer_debut_pluie_timeout"]
+[connection signal="timeout" from="TimerPluie" to="." method="_on_timer_pluie_timeout"]
