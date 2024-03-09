@@ -13,4 +13,5 @@ shape = SubResource("CircleShape2D_ye7ry")
 debug_color = Color(0, 0.835294, 0.803922, 0.807843)
 
 [node name="PoseChantier" parent="." index="1" instance=ExtResource("2_26eel")]
+position = Vector2(0, 10)
 chantier = ExtResource("3_o4u12")

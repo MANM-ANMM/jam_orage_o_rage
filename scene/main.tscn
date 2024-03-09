@@ -36,3 +36,6 @@ position = Vector2(129, -816)
 
 [node name="AdeptePoseChantier" parent="Planete/personnages" instance=ExtResource("7_xuc5i")]
 position = Vector2(281, -776)
+
+[node name="AdeptePoseChantier2" parent="Planete/personnages" instance=ExtResource("7_xuc5i")]
+position = Vector2(250, -789)

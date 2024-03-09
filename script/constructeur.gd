@@ -4,14 +4,14 @@ var chantier_ref : WeakRef = null
 @onready var timer := $Timer
 @export var peuple : Types.Peuple
 
-func _on_area_entered(area):
-	if area.peuple != peuple:
+func _on_body_entered(body):
+	if body.peuple != peuple:
 		return
-	chantier_ref = weakref(area)
+	chantier_ref = weakref(body)
 	timer.start()
 
-func _on_area_exited(area):
-	if area.peuple != peuple:
+func _on_body_exited(body):
+	if body.peuple != peuple:
 		return
 	chantier_ref = null
 	timer.stop()
