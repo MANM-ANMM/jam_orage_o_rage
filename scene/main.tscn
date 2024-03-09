@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dpf6w7nhftecy"]
+[gd_scene load_steps=10 format=3 uid="uid://dpf6w7nhftecy"]
 
 [ext_resource type="PackedScene" uid="uid://cipx2fu5v6v3s" path="res://scene/eclair.tscn" id="1_i5wbh"]
 [ext_resource type="Script" path="res://script/main.gd" id="1_rtxvy"]
@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://3c52545gaet2" path="res://scene/player.tscn" id="4_d6ngq"]
 [ext_resource type="PackedScene" uid="uid://bjyjef8wd85i3" path="res://scene/constructions/adeptes/chantier_temple.tscn" id="5_f7pyk"]
 [ext_resource type="PackedScene" uid="uid://b0rirvskmpf7i" path="res://scene/personnages/adeptes/adepte_constructeur.tscn" id="5_vn2rs"]
+[ext_resource type="PackedScene" uid="uid://do855p11p6w40" path="res://scene/constructions/adeptes/temple.tscn" id="6_556qx"]
 [ext_resource type="PackedScene" uid="uid://dgx465jyd2y5w" path="res://scene/personnages/adeptes/adepte_pose_chantier.tscn" id="7_xuc5i"]
+[ext_resource type="PackedScene" uid="uid://b2yap1l1e3a52" path="res://scene/personnages/apostats/apostat_guerrier.tscn" id="8_3brll"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_rtxvy")
@@ -27,15 +29,23 @@ points = PackedVector2Array(0, 0, -60.1731, 186.45, 74.5781, 139.765, 14.405, 32
 [node name="batiments" type="Node2D" parent="Planete"]
 
 [node name="ChantierTemple" parent="Planete/batiments" instance=ExtResource("5_f7pyk")]
-position = Vector2(214, -786)
+position = Vector2(208, -792)
+
+[node name="Temple" parent="Planete/batiments" instance=ExtResource("6_556qx")]
+position = Vector2(327, -736)
 
 [node name="personnages" type="Node2D" parent="Planete"]
 
-[node name="adepte" parent="Planete/personnages" instance=ExtResource("5_vn2rs")]
-position = Vector2(129, -816)
-
 [node name="AdeptePoseChantier" parent="Planete/personnages" instance=ExtResource("7_xuc5i")]
 position = Vector2(281, -776)
+collision_layer = 1
 
 [node name="AdeptePoseChantier2" parent="Planete/personnages" instance=ExtResource("7_xuc5i")]
 position = Vector2(250, -789)
+collision_layer = 1
+
+[node name="ApostatGuerrier" parent="Planete/personnages" instance=ExtResource("8_3brll")]
+position = Vector2(158, -805)
+
+[node name="AdepteConstructeur" parent="Planete/personnages" instance=ExtResource("5_vn2rs")]
+position = Vector2(129, -800)

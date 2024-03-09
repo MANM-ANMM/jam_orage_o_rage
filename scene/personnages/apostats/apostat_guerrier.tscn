@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2yap1l1e3a52"]
+
+[ext_resource type="PackedScene" uid="uid://b11tyoc8vc22q" path="res://scene/personnages/personnage.tscn" id="1_1pcxc"]
+[ext_resource type="PackedScene" uid="uid://bnogq2r2rhcu0" path="res://scene/personnages/arme.tscn" id="2_b4pjv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yq8d6"]
+radius = 15.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_04k6o"]
+radius = 4.0
+
+[node name="ApostatGuerrier" instance=ExtResource("1_1pcxc")]
+peuple = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+shape = SubResource("CircleShape2D_yq8d6")
+debug_color = Color(0.866667, 0, 0.862745, 0.419608)
+
+[node name="Arme" parent="." index="1" instance=ExtResource("2_b4pjv")]
+peuple = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arme" index="0"]
+position = Vector2(0, 20)
+shape = SubResource("CircleShape2D_04k6o")

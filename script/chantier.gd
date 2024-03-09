@@ -9,6 +9,8 @@ var niveau_construction := 0 :
 		niveau_construction = val
 		if niveau_construction >= difficulte_construction:
 			spawn_batiment()
+		elif niveau_construction<0:
+			destruction()
 
 @export var difficulte_construction := 4
 
@@ -22,3 +24,10 @@ func spawn_batiment():
 func _ready():
 	var up_direction = (get_parent().global_position - global_position).normalized()
 	rotation = up_direction.rotated(-PI/2).angle()
+
+func subir_degats(degats:int):
+	niveau_construction -= degats
+
+
+func destruction():
+	queue_free()
