@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Personnage
+
 @export var peuple : Types.Peuple
 @onready var planete : Node2D = get_parent()
 const puissance_gravite := 100.0

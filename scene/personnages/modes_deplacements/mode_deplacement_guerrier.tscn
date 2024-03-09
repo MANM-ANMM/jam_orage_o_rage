@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4xjsv0naewry"]
+
+[ext_resource type="Script" path="res://script/personnages/deplacement_guerrier.gd" id="1_ilgb5"]
+
+[node name="ModeDeplacementGuerrier" type="Node"]
+script = ExtResource("1_ilgb5")

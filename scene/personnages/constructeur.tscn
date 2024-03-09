@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://djdrod7i0doew"]
 
-[ext_resource type="Script" path="res://script/constructeur.gd" id="1_nxpvg"]
+[ext_resource type="Script" path="res://script/personnages/constructeur.gd" id="1_nxpvg"]
 
 [node name="constructeur" type="Area2D"]
 collision_layer = 0

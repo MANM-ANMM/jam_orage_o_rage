@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b0rirvskmpf7i"]
+[gd_scene load_steps=5 format=3 uid="uid://b0rirvskmpf7i"]
 
 [ext_resource type="PackedScene" uid="uid://b11tyoc8vc22q" path="res://scene/personnages/personnage.tscn" id="1_gbo7i"]
 [ext_resource type="PackedScene" uid="uid://djdrod7i0doew" path="res://scene/personnages/constructeur.tscn" id="2_nsfdy"]
+[ext_resource type="PackedScene" uid="uid://f4bj033thorm" path="res://scene/personnages/modes_deplacements/mode_deplacement_civil.tscn" id="3_jxjue"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c6s6m"]
 
@@ -16,3 +17,6 @@ debug_color = Color(0.8, 0.745098, 0, 0.807843)
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="constructeur" index="1"]
 shape = SubResource("CircleShape2D_c6s6m")
 debug_color = Color(0.8, 0.745098, 0, 0.807843)
+
+[node name="ModeDeplacementCivil" parent="." index="2" node_paths=PackedStringArray("personnage") instance=ExtResource("3_jxjue")]
+personnage = NodePath("..")

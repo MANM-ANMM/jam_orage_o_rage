@@ -36,16 +36,11 @@ position = Vector2(327, -736)
 
 [node name="personnages" type="Node2D" parent="Planete"]
 
-[node name="AdeptePoseChantier" parent="Planete/personnages" instance=ExtResource("7_xuc5i")]
-position = Vector2(281, -776)
-collision_layer = 1
+[node name="AdepteConstructeur" parent="Planete/personnages" instance=ExtResource("5_vn2rs")]
+position = Vector2(113, -800)
 
-[node name="AdeptePoseChantier2" parent="Planete/personnages" instance=ExtResource("7_xuc5i")]
-position = Vector2(250, -789)
-collision_layer = 1
+[node name="AdeptePoseChantier" parent="Planete/personnages" instance=ExtResource("7_xuc5i")]
+position = Vector2(-48, -807)
 
 [node name="ApostatGuerrier" parent="Planete/personnages" instance=ExtResource("8_3brll")]
-position = Vector2(158, -805)
-
-[node name="AdepteConstructeur" parent="Planete/personnages" instance=ExtResource("5_vn2rs")]
-position = Vector2(129, -800)
+position = Vector2(39, -811)
