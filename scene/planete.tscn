@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cifcn4sdgqepo"]
+[gd_scene load_steps=3 format=3 uid="uid://cifcn4sdgqepo"]
+
+[ext_resource type="Texture2D" uid="uid://cvf4c28qe8opg" path="res://sprite/planete.png" id="1_vstti"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bhx8o"]
 radius = 800.0
@@ -8,3 +10,7 @@ radius = 800.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_bhx8o")
 debug_color = Color(0, 0.701961, 0.188235, 0.560784)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.595, 1.595)
+texture = ExtResource("1_vstti")

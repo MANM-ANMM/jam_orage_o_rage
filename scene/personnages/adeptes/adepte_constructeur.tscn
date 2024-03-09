@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0rirvskmpf7i"]
+[gd_scene load_steps=6 format=3 uid="uid://b0rirvskmpf7i"]
 
 [ext_resource type="PackedScene" uid="uid://b11tyoc8vc22q" path="res://scene/personnages/personnage.tscn" id="1_gbo7i"]
 [ext_resource type="PackedScene" uid="uid://djdrod7i0doew" path="res://scene/personnages/constructeur.tscn" id="2_nsfdy"]
 [ext_resource type="PackedScene" uid="uid://f4bj033thorm" path="res://scene/personnages/modes_deplacements/mode_deplacement_civil.tscn" id="3_jxjue"]
+[ext_resource type="Texture2D" uid="uid://b26d76fi6j3f8" path="res://sprite/apotre_constructeur.png" id="4_ok2xu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c6s6m"]
 radius = 5.0
@@ -21,3 +22,8 @@ debug_color = Color(0.8, 0.745098, 0, 0.807843)
 
 [node name="ModeDeplacementCivil" parent="." index="2" node_paths=PackedStringArray("personnage") instance=ExtResource("3_jxjue")]
 personnage = NodePath("..")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="4"]
+position = Vector2(0, -2.75)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("4_ok2xu")

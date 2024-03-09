@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://3c52545gaet2"]
 
-[ext_resource type="Texture2D" uid="uid://c0iegaufwxl7r" path="res://icon.svg" id="1_gqmoa"]
 [ext_resource type="Script" path="res://script/player.gd" id="1_pfb8c"]
+[ext_resource type="Texture2D" uid="uid://b03eqnc28y3tc" path="res://sprite/player.png" id="2_gw48b"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u4is0"]
 radius = 35.0
@@ -11,11 +11,11 @@ height = 220.0
 script = ExtResource("1_pfb8c")
 
 [node name="altitude" type="Node2D" parent="."]
-position = Vector2(0, -900)
+position = Vector2(0, -890)
 
 [node name="Sprite2D" type="Sprite2D" parent="altitude"]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_gqmoa")
+scale = Vector2(0.075, 0.075)
+texture = ExtResource("2_gw48b")
 
 [node name="AreaNuages" type="Area2D" parent="altitude"]
 collision_layer = 0

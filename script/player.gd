@@ -3,11 +3,12 @@ extends Node2D
 @export var speed := PI/15.0
 @onready var area_nuages := $altitude/AreaNuages
 @export var ciblage_foudre : CiblageFoudre
+@onready var sprite := $altitude/Sprite2D
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var movement = Input.get_axis("move_left", "move_right")
-	
+	sprite.rotation = rotate_toward(sprite.rotation, movement*PI/20, delta)
 	rotate(movement*delta*speed)
 
 func _physics_process(delta):
