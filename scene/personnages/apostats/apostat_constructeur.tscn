@@ -14,8 +14,9 @@ peuple = 1
 shape = SubResource("CircleShape2D_cisw5")
 debug_color = Color(0.784314, 0.113725, 1, 0.419608)
 
-[node name="ModeDeplacementCivil" parent="." index="1" node_paths=PackedStringArray("personnage") instance=ExtResource("2_c7dt5")]
+[node name="ModeDeplacementCivil" parent="." index="1" node_paths=PackedStringArray("personnage", "sprite") instance=ExtResource("2_c7dt5")]
 personnage = NodePath("..")
+sprite = NodePath("../Sprite2D")
 
 [node name="constructeur" parent="." index="2" instance=ExtResource("3_gp4ti")]
 peuple = 1
@@ -24,3 +25,5 @@ peuple = 1
 visible = false
 shape = SubResource("CircleShape2D_cisw5")
 debug_color = Color(0.784314, 0.113725, 1, 0.419608)
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="4"]

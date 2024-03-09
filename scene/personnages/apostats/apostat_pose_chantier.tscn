@@ -18,5 +18,10 @@ debug_color = Color(0.839216, 0, 0.92549, 0.419608)
 position = Vector2(0, 5)
 chantier_path = "res://scene/constructions/apostats/chantier_maison.tscn"
 
-[node name="ModeDeplacementCivil" parent="." index="2" node_paths=PackedStringArray("personnage") instance=ExtResource("3_yt62e")]
+[node name="ModeDeplacementCivil" parent="." index="2" node_paths=PackedStringArray("personnage", "sprite") instance=ExtResource("3_yt62e")]
 personnage = NodePath("..")
+sprite = NodePath("../Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="4"]
+position = Vector2(1, -4)
+scale = Vector2(0.04, 0.04)

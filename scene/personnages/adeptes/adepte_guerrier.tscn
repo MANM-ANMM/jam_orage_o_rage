@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://b231choketrk2"]
+
+[ext_resource type="PackedScene" uid="uid://b11tyoc8vc22q" path="res://scene/personnages/personnage.tscn" id="1_cx1ck"]
+[ext_resource type="Texture2D" uid="uid://blg5blyn8rn" path="res://sprite/adepte_guerrier.png" id="2_7eaaw"]
+[ext_resource type="PackedScene" uid="uid://b4xjsv0naewry" path="res://scene/personnages/modes_deplacements/mode_deplacement_guerrier.tscn" id="3_mjftr"]
+[ext_resource type="PackedScene" uid="uid://bnogq2r2rhcu0" path="res://scene/personnages/arme.tscn" id="4_0odfj"]
+[ext_resource type="Texture2D" uid="uid://didjqssv5y81s" path="res://sprite/arme_adepte.png" id="5_24fgl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d6bqc"]
+radius = 18.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j7e0i"]
+radius = 3.0
+
+[node name="AdepteGuerrier" instance=ExtResource("1_cx1ck")]
+
+[node name="AdepteGuerrier" type="Sprite2D" parent="." index="1"]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("2_7eaaw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+shape = SubResource("CircleShape2D_d6bqc")
+
+[node name="ModeDeplacementGuerrier" parent="." index="3" node_paths=PackedStringArray("personnage", "sprite") instance=ExtResource("3_mjftr")]
+personnage = NodePath("..")
+sprite = NodePath("../AdepteGuerrier")
+
+[node name="Arme" parent="." index="4" instance=ExtResource("4_0odfj")]
+speed = 6.284
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arme" index="1"]
+position = Vector2(0, 22)
+shape = SubResource("CircleShape2D_j7e0i")
+
+[node name="Sprite2D" type="Sprite2D" parent="Arme" index="2"]
+position = Vector2(0, 22)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("5_24fgl")

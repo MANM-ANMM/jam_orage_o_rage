@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b26d76fi6j3f8"
-path="res://.godot/imported/apotre_constructeur.png-908b3729cf740e925cd2642b69d2f4af.ctex"
+uid="uid://dnmt5li7m8w7i"
+path="res://.godot/imported/adepte_pose_temple.png-4baae15b0555ff3d64878e0a9b1f14cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/apotre_constructeur.png"
-dest_files=["res://.godot/imported/apotre_constructeur.png-908b3729cf740e925cd2642b69d2f4af.ctex"]
+source_file="res://sprite/adepte_pose_temple.png"
+dest_files=["res://.godot/imported/adepte_pose_temple.png-4baae15b0555ff3d64878e0a9b1f14cd.ctex"]
 
 [params]
 

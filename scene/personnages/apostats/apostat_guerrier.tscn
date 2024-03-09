@@ -26,5 +26,8 @@ peuple = 1
 position = Vector2(0, 11)
 shape = SubResource("CircleShape2D_04k6o")
 
-[node name="ModeDeplacementGuerrier" parent="." index="2" node_paths=PackedStringArray("personnage") instance=ExtResource("3_o02gp")]
+[node name="ModeDeplacementGuerrier" parent="." index="2" node_paths=PackedStringArray("personnage", "sprite") instance=ExtResource("3_o02gp")]
 personnage = NodePath("..")
+sprite = NodePath("../Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="4"]

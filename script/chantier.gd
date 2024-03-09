@@ -3,6 +3,7 @@ extends StaticBody2D
 class_name Chantier
 
 @export var peuple : Types.Peuple
+@export var animated_sprite : AnimatedSprite2D
 @export var batiment : PackedScene
 var niveau_construction := 0 :
 	set(val):
@@ -11,6 +12,8 @@ var niveau_construction := 0 :
 			spawn_batiment()
 		elif niveau_construction<0:
 			destruction()
+		elif animated_sprite:
+			animated_sprite.frame = val
 
 @export var difficulte_construction := 4
 
