@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3 uid="uid://ny5mb0q7nfuf"]
+
+[ext_resource type="PackedScene" uid="uid://duk6e7jesc215" path="res://scene/constructions/chantier.tscn" id="1_6nw1e"]
+[ext_resource type="PackedScene" uid="uid://c7ti6hy0gaycc" path="res://scene/constructions/apostats/canon.tscn" id="2_vrglo"]
+[ext_resource type="Texture2D" uid="uid://jqcmlo82sqy4" path="res://sprite/construction/canon/0.png" id="3_ht3ao"]
+[ext_resource type="Texture2D" uid="uid://dbieusb8j5ycg" path="res://sprite/construction/canon/1.png" id="4_jr85k"]
+[ext_resource type="Texture2D" uid="uid://bkssrc8scjrus" path="res://sprite/construction/canon/2.png" id="5_f8ar5"]
+[ext_resource type="Texture2D" uid="uid://hncvndaf4it3" path="res://sprite/construction/canon/3.png" id="6_pnisw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_quykc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ht3ao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jr85k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_f8ar5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pnisw")
+}],
+"loop": true,
+"name": &"chantierCanon",
+"speed": 5.0
+}]
+
+[node name="chantierCanon" node_paths=PackedStringArray("animated_sprite") instance=ExtResource("1_6nw1e")]
+peuple = 1
+animated_sprite = NodePath("AnimatedSprite2D")
+batiment = ExtResource("2_vrglo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+position = Vector2(0, -24)
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_quykc")
+animation = &"chantierCanon"

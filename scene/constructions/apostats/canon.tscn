@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://c7ti6hy0gaycc"]
+
+[ext_resource type="PackedScene" uid="uid://cew563e1kmwm7" path="res://scene/constructions/batiment.tscn" id="1_5ps3q"]
+[ext_resource type="Texture2D" uid="uid://cnndq4pnifjr4" path="res://sprite/construction/canon.png" id="2_frrea"]
+[ext_resource type="PackedScene" uid="uid://ddsk43ynlodgy" path="res://scene/constructions/lanceur_boulet.tscn" id="3_c4wt1"]
+[ext_resource type="PackedScene" uid="uid://bk0e348hw7tb5" path="res://scene/constructions/boulet_apostat.tscn" id="4_7fxsb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fv3vt"]
+size = Vector2(40, 42.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_walys"]
+radius = 500.0
+
+[node name="Canon" instance=ExtResource("1_5ps3q")]
+peuple = 1
+
+[node name="Canon" type="Sprite2D" parent="." index="0"]
+position = Vector2(0, -24)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_frrea")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+position = Vector2(-2, -19.75)
+shape = SubResource("RectangleShape2D_fv3vt")
+
+[node name="LanceurBoulet" parent="." index="2" instance=ExtResource("3_c4wt1")]
+position = Vector2(-22, -53)
+rotation = -1.60582
+scene_boulet = ExtResource("4_7fxsb")
+peuple = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LanceurBoulet" index="1"]
+shape = SubResource("CircleShape2D_walys")
