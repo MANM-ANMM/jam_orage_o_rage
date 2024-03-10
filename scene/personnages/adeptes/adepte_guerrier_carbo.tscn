@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://prut7go6bs1l"]
+
+[ext_resource type="Texture2D" uid="uid://6ujn7ff5cax8" path="res://sprite/adepte_guerrier_carbo.png" id="1_c627q"]
+[ext_resource type="Script" path="res://script/personnages/cadavre_carbo.gd" id="2_8pxjw"]
+
+[node name="AdepteGuerrierCarbo" type="Sprite2D"]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("1_c627q")
+script = ExtResource("2_8pxjw")

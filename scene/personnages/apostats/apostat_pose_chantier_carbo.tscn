@@ -1,7 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://b22nb8d81pb5p"]
+[gd_scene load_steps=3 format=3 uid="uid://b22nb8d81pb5p"]
 
 [ext_resource type="Texture2D" uid="uid://q804qter4e4v" path="res://sprite/apostat_pose_maison_carbonize.png" id="1_wv4fb"]
+[ext_resource type="Script" path="res://script/personnages/cadavre_carbo.gd" id="2_sjw12"]
 
 [node name="apostat_pose_chantier_carbo" type="Sprite2D"]
 scale = Vector2(0.04, 0.04)
 texture = ExtResource("1_wv4fb")
+script = ExtResource("2_sjw12")

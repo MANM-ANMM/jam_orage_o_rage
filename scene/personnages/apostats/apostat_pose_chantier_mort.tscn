@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbic7455ydcwd"]
+
+[ext_resource type="Texture2D" uid="uid://bptdtfqfecj1p" path="res://sprite/apostat_pose_maison_mort.png" id="1_4xi0w"]
+[ext_resource type="Script" path="res://script/personnages/cadavre_carbo.gd" id="2_jvlh4"]
+
+[node name="ApostatPoseChantierMort" type="Sprite2D"]
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("1_4xi0w")
+script = ExtResource("2_jvlh4")

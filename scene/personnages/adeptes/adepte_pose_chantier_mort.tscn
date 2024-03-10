@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://g8wfbjrtrnef"]
+
+[ext_resource type="Script" path="res://script/personnages/cadavre_carbo.gd" id="1_k0tq5"]
+[ext_resource type="Texture2D" uid="uid://qrjkvr7s2yf6" path="res://sprite/adepte_pose_temple_mort.png" id="1_yboj0"]
+
+[node name="AdeptePoseChantierMort" type="Node2D"]
+
+[node name="AdeptePoseChantierMort" type="Sprite2D" parent="."]
+position = Vector2(1, -7.105)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_yboj0")
+script = ExtResource("1_k0tq5")

@@ -53,6 +53,7 @@ func select_scene_cadavre()->PackedScene:
 func mourrir():
 	var cadavre = select_scene_cadavre().instantiate()
 	cadavre.position = position
+	cadavre.rotation = rotation
 	add_sibling(cadavre)
 	queue_free()
 

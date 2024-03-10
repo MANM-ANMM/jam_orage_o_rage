@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://b231choketrk2"]
+[gd_scene load_steps=10 format=3 uid="uid://b231choketrk2"]
 
 [ext_resource type="PackedScene" uid="uid://b11tyoc8vc22q" path="res://scene/personnages/personnage.tscn" id="1_cx1ck"]
+[ext_resource type="PackedScene" uid="uid://prut7go6bs1l" path="res://scene/personnages/adeptes/adepte_guerrier_carbo.tscn" id="2_4nnw2"]
 [ext_resource type="Texture2D" uid="uid://blg5blyn8rn" path="res://sprite/adepte_guerrier.png" id="2_7eaaw"]
+[ext_resource type="PackedScene" uid="uid://dgbo62wwykghi" path="res://scene/personnages/adeptes/adepte_guerrier_mort.tscn" id="3_88txt"]
 [ext_resource type="PackedScene" uid="uid://b4xjsv0naewry" path="res://scene/personnages/modes_deplacements/mode_deplacement_guerrier.tscn" id="3_mjftr"]
 [ext_resource type="PackedScene" uid="uid://bnogq2r2rhcu0" path="res://scene/personnages/arme.tscn" id="4_0odfj"]
 [ext_resource type="Texture2D" uid="uid://didjqssv5y81s" path="res://sprite/arme_adepte.png" id="5_24fgl"]
@@ -13,6 +15,8 @@ radius = 18.0
 radius = 3.0
 
 [node name="AdepteGuerrier" instance=ExtResource("1_cx1ck")]
+scene_carbo = ExtResource("2_4nnw2")
+scene_mort = ExtResource("3_88txt")
 
 [node name="AdepteGuerrier" type="Sprite2D" parent="." index="1"]
 scale = Vector2(0.07, 0.07)

@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://nj36kcesrt1o"]
+[gd_scene load_steps=8 format=3 uid="uid://nj36kcesrt1o"]
 
 [ext_resource type="PackedScene" uid="uid://b11tyoc8vc22q" path="res://scene/personnages/personnage.tscn" id="1_1o57u"]
 [ext_resource type="PackedScene" uid="uid://f4bj033thorm" path="res://scene/personnages/modes_deplacements/mode_deplacement_civil.tscn" id="2_c7dt5"]
+[ext_resource type="PackedScene" uid="uid://bo52t3hafb80n" path="res://scene/personnages/apostats/apostat_constructeur_carbo.tscn" id="2_gg6xn"]
+[ext_resource type="PackedScene" uid="uid://xdl2xymqywai" path="res://scene/personnages/apostats/apostat_constructeur_mort.tscn" id="3_3vmqh"]
 [ext_resource type="PackedScene" uid="uid://djdrod7i0doew" path="res://scene/personnages/constructeur.tscn" id="3_gp4ti"]
 [ext_resource type="Texture2D" uid="uid://qd150axgu31e" path="res://sprite/apostat_constructeur.png" id="4_qtq7c"]
 
@@ -9,6 +11,8 @@
 radius = 6.0
 
 [node name="ApostatConstructeur" instance=ExtResource("1_1o57u")]
+scene_carbo = ExtResource("2_gg6xn")
+scene_mort = ExtResource("3_3vmqh")
 peuple = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
@@ -28,6 +32,6 @@ shape = SubResource("CircleShape2D_cisw5")
 debug_color = Color(0.784314, 0.113725, 1, 0.419608)
 
 [node name="Sprite2D" type="Sprite2D" parent="." index="4"]
-position = Vector2(0, -2)
+position = Vector2(0, -1)
 scale = Vector2(0.03, 0.03)
 texture = ExtResource("4_qtq7c")

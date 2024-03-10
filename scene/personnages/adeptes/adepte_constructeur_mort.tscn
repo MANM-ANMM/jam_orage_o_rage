@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlf386j2qer52"]
+
+[ext_resource type="Texture2D" uid="uid://bkc8n5s43post" path="res://sprite/adepte_constructeur_mort.png" id="1_ovnho"]
+[ext_resource type="Script" path="res://script/personnages/cadavre_carbo.gd" id="1_vmbdg"]
+
+[node name="AdepteConstructeurMort" type="Node2D"]
+
+[node name="AdepteConstructeurMort" type="Sprite2D" parent="."]
+position = Vector2(1.155, -3)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("1_ovnho")
+region_enabled = true
+region_rect = Rect2(256, 0, 256, 256)
+script = ExtResource("1_vmbdg")

@@ -1,17 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://dgx465jyd2y5w"]
+[gd_scene load_steps=8 format=3 uid="uid://dgx465jyd2y5w"]
 
 [ext_resource type="PackedScene" uid="uid://b11tyoc8vc22q" path="res://scene/personnages/personnage.tscn" id="1_kthtd"]
 [ext_resource type="PackedScene" uid="uid://c8np6dwgtsylx" path="res://scene/personnages/pose_chantier.tscn" id="2_26eel"]
+[ext_resource type="PackedScene" uid="uid://b68k7scr1mapa" path="res://scene/personnages/adeptes/adepte_pose_chantier_carbo.tscn" id="2_pjfxo"]
+[ext_resource type="PackedScene" uid="uid://g8wfbjrtrnef" path="res://scene/personnages/adeptes/adepte_pose_chantier_mort.tscn" id="3_6p673"]
 [ext_resource type="PackedScene" uid="uid://f4bj033thorm" path="res://scene/personnages/modes_deplacements/mode_deplacement_civil.tscn" id="4_f0d4c"]
 [ext_resource type="Texture2D" uid="uid://dnmt5li7m8w7i" path="res://sprite/adepte_pose_temple.png" id="4_q1yac"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ye7ry"]
-radius = 5.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l4x80"]
+radius = 4.0
+height = 22.0
 
 [node name="AdeptePoseChantier" instance=ExtResource("1_kthtd")]
+scene_carbo = ExtResource("2_pjfxo")
+scene_mort = ExtResource("3_6p673")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
-shape = SubResource("CircleShape2D_ye7ry")
+position = Vector2(0, -6)
+shape = SubResource("CapsuleShape2D_l4x80")
 debug_color = Color(0, 0.835294, 0.803922, 0.807843)
 
 [node name="PoseChantier" parent="." index="1" instance=ExtResource("2_26eel")]

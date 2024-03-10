@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b0rirvskmpf7i"]
+[gd_scene load_steps=8 format=3 uid="uid://b0rirvskmpf7i"]
 
 [ext_resource type="PackedScene" uid="uid://b11tyoc8vc22q" path="res://scene/personnages/personnage.tscn" id="1_gbo7i"]
+[ext_resource type="PackedScene" uid="uid://cksxrsjs7fwf3" path="res://scene/personnages/adeptes/adepte_constructeur_carbo.tscn" id="2_5burj"]
 [ext_resource type="PackedScene" uid="uid://djdrod7i0doew" path="res://scene/personnages/constructeur.tscn" id="2_nsfdy"]
+[ext_resource type="PackedScene" uid="uid://dlf386j2qer52" path="res://scene/personnages/adeptes/adepte_constructeur_mort.tscn" id="3_i555b"]
 [ext_resource type="PackedScene" uid="uid://f4bj033thorm" path="res://scene/personnages/modes_deplacements/mode_deplacement_civil.tscn" id="3_jxjue"]
 [ext_resource type="Texture2D" uid="uid://bp8601utkl5te" path="res://sprite/adepte_constructeur.png" id="4_ea2dc"]
 
@@ -9,6 +11,8 @@
 radius = 6.0
 
 [node name="AdepteConstructeur" instance=ExtResource("1_gbo7i")]
+scene_carbo = ExtResource("2_5burj")
+scene_mort = ExtResource("3_i555b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 shape = SubResource("CircleShape2D_c6s6m")

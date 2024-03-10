@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgbo62wwykghi"]
+
+[ext_resource type="Texture2D" uid="uid://dan4gky2lrm6a" path="res://sprite/adepte_guerrier_mort.png" id="1_gtg3t"]
+[ext_resource type="Script" path="res://script/personnages/cadavre_carbo.gd" id="2_fpclv"]
+
+[node name="AdepteGuerrierMort" type="Sprite2D"]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("1_gtg3t")
+script = ExtResource("2_fpclv")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkjj1rrsif60h"]
+
+[ext_resource type="Texture2D" uid="uid://x5c6qu5jd3l1" path="res://sprite/apostat_guerrier_carbo.png" id="1_mvnfl"]
+[ext_resource type="Script" path="res://script/personnages/cadavre_carbo.gd" id="2_bhlqg"]
+
+[node name="ApostatGuerrierCarbo" type="Sprite2D"]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("1_mvnfl")
+script = ExtResource("2_bhlqg")

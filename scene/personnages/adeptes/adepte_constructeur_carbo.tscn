@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cksxrsjs7fwf3"]
+
+[ext_resource type="Texture2D" uid="uid://msoawyes1com" path="res://sprite/adepte_constructeur_carbo.png" id="1_ttmmm"]
+[ext_resource type="Script" path="res://script/personnages/cadavre_carbo.gd" id="2_ss816"]
+
+[node name="AdepteConstructeurCarbo" type="Node2D"]
+
+[node name="AdepteConstructeurCarbo" type="Sprite2D" parent="."]
+position = Vector2(1.155, -3)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("1_ttmmm")
+region_enabled = true
+region_rect = Rect2(256, 0, 256, 256)
+script = ExtResource("2_ss816")

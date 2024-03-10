@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://b2yap1l1e3a52"]
+[gd_scene load_steps=10 format=3 uid="uid://b2yap1l1e3a52"]
 
 [ext_resource type="PackedScene" uid="uid://b11tyoc8vc22q" path="res://scene/personnages/personnage.tscn" id="1_1pcxc"]
 [ext_resource type="PackedScene" uid="uid://bnogq2r2rhcu0" path="res://scene/personnages/arme.tscn" id="2_b4pjv"]
+[ext_resource type="PackedScene" uid="uid://bkjj1rrsif60h" path="res://scene/personnages/apostats/apostat_guerrier_carbo.tscn" id="2_hv577"]
 [ext_resource type="Texture2D" uid="uid://b3ei2de1svhmi" path="res://sprite/arme_apostat.png" id="3_212xj"]
+[ext_resource type="PackedScene" uid="uid://cmci04x5lx716" path="res://scene/personnages/apostats/apostat_guerrier_mort.tscn" id="3_lrwku"]
 [ext_resource type="PackedScene" uid="uid://b4xjsv0naewry" path="res://scene/personnages/modes_deplacements/mode_deplacement_guerrier.tscn" id="3_o02gp"]
 [ext_resource type="Texture2D" uid="uid://mwkm1iuqvq1r" path="res://sprite/apostat_guerrier.png" id="4_hv2sp"]
 
@@ -13,6 +15,8 @@ radius = 18.0
 radius = 3.0
 
 [node name="ApostatGuerrier" instance=ExtResource("1_1pcxc")]
+scene_carbo = ExtResource("2_hv577")
+scene_mort = ExtResource("3_lrwku")
 peuple = 1
 speed = 15.0
 

@@ -33,4 +33,5 @@ func start(gpos):
 
 
 func _on_zone_foudre_body_entered(body):
-	body.subir_foudre(1)
+	if visible:
+		body.subir_foudre(1)
