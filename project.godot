@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Types="*res://script/global_types.gd"
 Nodes="*res://script/global_nodes.gd"
+EventBus="*res://script/global_eventbus.gd"
 
 [display]
 

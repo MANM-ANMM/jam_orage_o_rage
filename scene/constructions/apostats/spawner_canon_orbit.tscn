@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmdqrmybnuq03"]
+
+[ext_resource type="Script" path="res://script/constructions/spawner_canon_orbit.gd" id="1_n0bss"]
+[ext_resource type="PackedScene" uid="uid://ce5vmbunw7qrm" path="res://scene/constructions/apostats/pose_chantier_canon.tscn" id="2_25eb0"]
+
+[node name="SpawnerCanonOrbit" type="Node2D"]
+script = ExtResource("1_n0bss")
+scene_orbit = ExtResource("2_25eb0")
+peuple = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 60.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="start_launch_procedure"]

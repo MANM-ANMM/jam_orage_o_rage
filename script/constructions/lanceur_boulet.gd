@@ -23,8 +23,9 @@ func _on_body_exited(body):
 func tirer():
 	var b :Boulet= scene_boulet.instantiate()
 	b.global_position = global_position
-	var cible :Node2D= get_cibles().front()
-	print(cible)
+	var cibles = get_cibles()
+	if cibles.is_empty(): return
+	var cible :Node2D= cibles.front()
 	var distance := cible.global_position.distance_to(global_position)
 	var puissance = 0.8855*distance+192.19
 	# 305 461

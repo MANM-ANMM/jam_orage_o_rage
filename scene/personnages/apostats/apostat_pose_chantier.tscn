@@ -21,6 +21,7 @@ debug_color = Color(0.839216, 0, 0.92549, 0.419608)
 [node name="PoseChantier" parent="." index="1" instance=ExtResource("2_tdiab")]
 position = Vector2(0, 5)
 chantier_path = "res://scene/constructions/apostats/chantier_maison.tscn"
+peuple = 1
 
 [node name="ModeDeplacementCivil" parent="." index="2" node_paths=PackedStringArray("personnage", "sprite") instance=ExtResource("3_yt62e")]
 personnage = NodePath("..")

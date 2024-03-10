@@ -43,3 +43,7 @@ wait_time = 8.0
 
 [node name="LimitateurSpawn" parent="." index="6" node_paths=PackedStringArray("spawners") instance=ExtResource("8_yy5fp")]
 spawners = [NodePath("../Generateur_constructeur"), NodePath("../Generateur_poseur")]
+
+[node name="LimitateurSpawn2" parent="." index="7" node_paths=PackedStringArray("spawners") instance=ExtResource("8_yy5fp")]
+spawners = [NodePath("../Generateur_guerrier")]
+seuil = 32
