@@ -15,3 +15,6 @@ func _on_body_entered(body):
 		body.subir_degats(1)
 	queue_free()
 	
+
+func subir_foudre(foudre:int):
+	queue_free()

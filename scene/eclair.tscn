@@ -29,4 +29,5 @@ collision_mask = 16
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZoneFoudre"]
 shape = SubResource("CircleShape2D_1blt0")
 
+[connection signal="area_entered" from="ZoneFoudre" to="." method="_on_zone_foudre_area_entered"]
 [connection signal="body_entered" from="ZoneFoudre" to="." method="_on_zone_foudre_body_entered"]

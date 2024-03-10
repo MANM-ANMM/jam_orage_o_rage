@@ -16,6 +16,7 @@ func _physics_process(delta):
 		ciblage_foudre.start_growing()
 	if Input.is_action_just_released("eclair"):
 		var cibles := ciblage_foudre.get_overlapping_bodies()
+		cibles.append_array(ciblage_foudre.get_overlapping_areas())
 		var nuages = area_nuages.get_overlapping_areas().map(func(alt): return alt.get_parent())
 		
 		var nb : int = min(cibles.size(), nuages.size())
