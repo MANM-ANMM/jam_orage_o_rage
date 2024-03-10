@@ -38,3 +38,7 @@ texture = ExtResource("6_pihkj")
 
 [node name="LimitateurSpawn" parent="." index="5" node_paths=PackedStringArray("spawners") instance=ExtResource("7_6qdgk")]
 spawners = [NodePath("../GenerateurPoseChantier"), NodePath("../GenerateurConstructeur")]
+
+[node name="LimitateurSpawnGuerrier" parent="." index="6" node_paths=PackedStringArray("spawners") instance=ExtResource("7_6qdgk")]
+spawners = [NodePath("../GenerateurGuerrier")]
+seuil = 35
