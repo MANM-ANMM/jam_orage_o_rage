@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqce6iib1gkdx"]
+
+[ext_resource type="Script" path="res://script/constructions/spawner_zapper.gd" id="1_aettg"]
+[ext_resource type="Texture2D" uid="uid://3hyb0v5ecqeq" path="res://sprite/ciblage_foudre.png" id="1_wsmb0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s8se8"]
+radius = 12.0
+
+[node name="SpawnerZapper" type="StaticBody2D"]
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("1_aettg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_s8se8")
+
+[node name="CiblageFoudre" type="Sprite2D" parent="."]
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("1_wsmb0")

@@ -4,6 +4,9 @@ extends CharacterBody2D
 const puissance_gravite := 100.0
 @export var chantier : PackedScene
 
+func _process(delta):
+	rotation = up_direction.rotated(-PI/2).angle()
+
 func _physics_process(delta):
 	up_direction = (planete.global_position - global_position).normalized()
 	
@@ -17,4 +20,5 @@ func _physics_process(delta):
 func spawn_chantier(pos):
 		var c := chantier.instantiate()
 		c.global_position = pos
+		c.global_rotation = global_rotation
 		Nodes.node_batiments.add_child(c)
