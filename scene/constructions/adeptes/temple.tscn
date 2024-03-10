@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://do855p11p6w40"]
+[gd_scene load_steps=10 format=3 uid="uid://do855p11p6w40"]
 
 [ext_resource type="PackedScene" uid="uid://cew563e1kmwm7" path="res://scene/constructions/batiment.tscn" id="1_7kyrf"]
 [ext_resource type="Texture2D" uid="uid://ct5mf5uuvyqof" path="res://sprite/temple.png" id="2_dg4lf"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dgx465jyd2y5w" path="res://scene/personnages/adeptes/adepte_pose_chantier.tscn" id="5_3mbxn"]
 [ext_resource type="PackedScene" uid="uid://b231choketrk2" path="res://scene/personnages/adeptes/adepte_guerrier.tscn" id="6_cyb55"]
 [ext_resource type="PackedScene" uid="uid://dm25jpukyt1hn" path="res://scene/constructions/generateur_nuages.tscn" id="6_m15nj"]
+[ext_resource type="PackedScene" uid="uid://c6agda26wg3i0" path="res://scene/constructions/limitateur_spawn.tscn" id="8_yy5fp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8sjmv"]
 size = Vector2(51.2, 51.2)
@@ -36,3 +37,6 @@ scene_personnage = ExtResource("6_cyb55")
 
 [node name="GenerateurNuages" parent="." index="5" instance=ExtResource("6_m15nj")]
 wait_time = 8.0
+
+[node name="LimitateurSpawn" parent="." index="6" node_paths=PackedStringArray("spawners") instance=ExtResource("8_yy5fp")]
+spawners = [NodePath("../Generateur_constructeur"), NodePath("../Generateur_poseur")]

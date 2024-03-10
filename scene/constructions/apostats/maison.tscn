@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://beksk6ijkp4rg"]
+[gd_scene load_steps=9 format=3 uid="uid://beksk6ijkp4rg"]
 
 [ext_resource type="PackedScene" uid="uid://cew563e1kmwm7" path="res://scene/constructions/batiment.tscn" id="1_bjm10"]
 [ext_resource type="PackedScene" uid="uid://d0bwyfmeukx0o" path="res://scene/constructions/generateur_personnage.tscn" id="2_uw54l"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://nj36kcesrt1o" path="res://scene/personnages/apostats/apostat_constructeur.tscn" id="4_nonan"]
 [ext_resource type="PackedScene" uid="uid://b2yap1l1e3a52" path="res://scene/personnages/apostats/apostat_guerrier.tscn" id="5_3m6tv"]
 [ext_resource type="Texture2D" uid="uid://p1cj8sdb6g23" path="res://sprite/maison.png" id="6_pihkj"]
+[ext_resource type="PackedScene" uid="uid://c6agda26wg3i0" path="res://scene/constructions/limitateur_spawn.tscn" id="7_6qdgk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hkpc4"]
 size = Vector2(50, 37)
@@ -34,3 +35,6 @@ scene_personnage = ExtResource("5_3m6tv")
 position = Vector2(0, -21)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("6_pihkj")
+
+[node name="LimitateurSpawn" parent="." index="5" node_paths=PackedStringArray("spawners") instance=ExtResource("7_6qdgk")]
+spawners = [NodePath("../GenerateurPoseChantier"), NodePath("../GenerateurConstructeur")]
