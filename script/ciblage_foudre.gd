@@ -13,7 +13,7 @@ func _process(delta):
 	if do_grow and scale.x<max_grow:
 		scale.x+=delta*grow_speed*log(scale.x*10+0.01)
 		scale.y = scale.x
-		sprite.material.set_shader_parameter("level", 2.0+1.5*scale.x/max_grow) # 2 à 3.5
+		#sprite.material.set_shader_parameter("level", 3.2-1.2*scale.x/max_grow) # 2 à 3.5
 
 func stop_growing():
 	do_grow = false

@@ -1,11 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://bbccirbv3hfcs"]
+[gd_scene load_steps=8 format=3 uid="uid://bbccirbv3hfcs"]
 
 [ext_resource type="Script" path="res://script/nuage.gd" id="1_fn27w"]
 [ext_resource type="PackedScene" uid="uid://cipx2fu5v6v3s" path="res://scene/eclair.tscn" id="2_kxax6"]
+[ext_resource type="Texture2D" uid="uid://b7xkgwvtok3ed" path="res://sprite/nuages.png" id="3_7p17w"]
+[ext_resource type="Texture2D" uid="uid://0s774fenw8qd" path="res://sprite/gouttes_pluie.png" id="3_8ov5i"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_giho4"]
-radius = 20.0
-height = 60.0
+radius = 30.0
+height = 90.0
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_3u4ob"]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_b58r2"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(35, 20, 1)
+direction = Vector3(0, 1, 0)
+spread = 0.0
+initial_velocity_min = 125.79
+initial_velocity_max = 125.79
+gravity = Vector3(0, 0, 0)
+scale_min = 0.2
+scale_max = 0.2
+anim_offset_max = 1.0
 
 [node name="Nuage" type="Node2D" node_paths=PackedStringArray("eclair")]
 script = ExtResource("1_fn27w")
@@ -21,6 +42,22 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_giho4")
 
 [node name="Eclair" parent="altitude" instance=ExtResource("2_kxax6")]
+
+[node name="particule_pluie" type="GPUParticles2D" parent="altitude"]
+z_index = -3
+z_as_relative = false
+material = SubResource("CanvasItemMaterial_3u4ob")
+emitting = false
+amount = 91
+process_material = SubResource("ParticleProcessMaterial_b58r2")
+texture = ExtResource("3_8ov5i")
+lifetime = 3.0
+
+[node name="Sprite2D" type="Sprite2D" parent="altitude"]
+scale = Vector2(0.19, 0.19)
+texture = ExtResource("3_7p17w")
+hframes = 2
+vframes = 2
 
 [node name="TimerDebutPluie" type="Timer" parent="."]
 wait_time = 30.0

@@ -3,6 +3,8 @@ extends Node2D
 class_name Nuage
 
 @onready var timer_pluie := $TimerPluie
+@onready var sprite := $altitude/Sprite2D
+@onready var particule_pluie := $altitude/particule_pluie
 var pluie_on := false
 @export var eclair:Eclair
 const hauteur_nuages := -900
@@ -11,6 +13,8 @@ var speed := PI/randf_range(80, 205)
 var sens :float= [1].pick_random()
 
 func _ready():
+	sprite.frame_coords = Vector2i(randi_range(0, sprite.hframes-1), 0)
+
 	var tween = get_tree().create_tween()
 	var dest := Vector2(0, hauteur_nuages*(1+speed+randf_range(-0.01, 0.01)))
 	tween.tween_property($altitude, "position", dest, 0.8)
@@ -22,6 +26,8 @@ func _process(delta):
 
 func commencer_pluie():
 	timer_pluie.start()
+	sprite.frame_coords.y=1
+	particule_pluie.emitting = true
 	pluie_on = true
 	speed /= 2
 

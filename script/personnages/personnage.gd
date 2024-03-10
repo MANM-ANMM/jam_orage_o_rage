@@ -2,6 +2,10 @@ extends CharacterBody2D
 
 class_name Personnage
 
+@export var scene_carbo : PackedScene
+@export var scene_mort : PackedScene
+var carbonnise = false
+
 @export var peuple : Types.Peuple
 @onready var planete : Node2D = get_parent()
 const puissance_gravite := 100.0
@@ -37,9 +41,19 @@ func subir_degats(degats:int):
 	vie -= degats
 
 func subir_foudre(foudre:int):
+	carbonnise = true
 	vie -= foudre
 
+func select_scene_cadavre()->PackedScene:
+	if carbonnise:
+		return scene_carbo
+	else:
+		return scene_mort
+
 func mourrir():
+	var cadavre = select_scene_cadavre().instantiate()
+	cadavre.position = position
+	add_sibling(cadavre)
 	queue_free()
 
 
