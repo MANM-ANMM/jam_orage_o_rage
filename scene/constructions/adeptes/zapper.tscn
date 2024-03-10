@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://b2jicdxmwtxqx"]
+
+[ext_resource type="PackedScene" uid="uid://cew563e1kmwm7" path="res://scene/constructions/batiment.tscn" id="1_kn8tw"]
+[ext_resource type="Texture2D" uid="uid://inqqxy2mgg6x" path="res://sprite/construction/zapper.png" id="2_gv8q8"]
+[ext_resource type="PackedScene" uid="uid://cipx2fu5v6v3s" path="res://scene/eclair.tscn" id="3_ushu3"]
+[ext_resource type="Script" path="res://script/constructions/zap.gd" id="4_01vss"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c1g6g"]
+size = Vector2(19, 47.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mo8q2"]
+radius = 7.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6pxuo"]
+radius = 60.0
+
+[node name="Zapper" instance=ExtResource("1_kn8tw")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+position = Vector2(1, -24)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_gv8q8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+position = Vector2(1.5, -23.25)
+shape = SubResource("RectangleShape2D_c1g6g")
+
+[node name="Recharge" type="StaticBody2D" parent="." index="2"]
+position = Vector2(2, -40)
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("4_01vss")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Recharge" index="0"]
+shape = SubResource("CircleShape2D_mo8q2")
+
+[node name="DetectAttaque" type="Area2D" parent="Recharge" index="1"]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Recharge/DetectAttaque" index="0"]
+shape = SubResource("CircleShape2D_6pxuo")
+
+[node name="Eclair" parent="Recharge" index="2" instance=ExtResource("3_ushu3")]
+position = Vector2(-1, 0)
+scale = Vector2(0.5, 0.5)
+
+[connection signal="area_entered" from="Recharge/DetectAttaque" to="Recharge" method="_on_detect_attaque_area_entered"]
+[connection signal="body_entered" from="Recharge/DetectAttaque" to="Recharge" method="_on_detect_attaque_body_entered"]

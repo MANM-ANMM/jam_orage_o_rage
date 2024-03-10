@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dpf6w7nhftecy"]
+[gd_scene load_steps=17 format=3 uid="uid://dpf6w7nhftecy"]
 
 [ext_resource type="PackedScene" uid="uid://cipx2fu5v6v3s" path="res://scene/eclair.tscn" id="1_i5wbh"]
 [ext_resource type="Script" path="res://script/main.gd" id="1_rtxvy"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://c7ti6hy0gaycc" path="res://scene/constructions/apostats/canon.tscn" id="8_2wgpj"]
 [ext_resource type="PackedScene" uid="uid://b2yap1l1e3a52" path="res://scene/personnages/apostats/apostat_guerrier.tscn" id="8_3brll"]
 [ext_resource type="PackedScene" uid="uid://ce5vmbunw7qrm" path="res://scene/constructions/apostats/pod_orbital_chantier_canon.tscn" id="9_7mh43"]
+[ext_resource type="PackedScene" uid="uid://b2jicdxmwtxqx" path="res://scene/constructions/adeptes/zapper.tscn" id="10_pj7l1"]
 [ext_resource type="PackedScene" uid="uid://bbccirbv3hfcs" path="res://scene/nuage.tscn" id="10_rjk7h"]
 [ext_resource type="PackedScene" uid="uid://bfrs5k7aqy8sy" path="res://scene/ciblage_foudre.tscn" id="11_bpmg8"]
 [ext_resource type="PackedScene" uid="uid://cmdqrmybnuq03" path="res://scene/constructions/apostats/spawner_canon_orbit.tscn" id="14_jr4nh"]
@@ -53,6 +54,10 @@ rotation = 1.2126
 
 [node name="PoseChantierCanon" parent="Planete/batiments" instance=ExtResource("9_7mh43")]
 position = Vector2(-218, -1165)
+
+[node name="Zapper" parent="Planete/batiments" instance=ExtResource("10_pj7l1")]
+position = Vector2(494, -632)
+rotation = 0.591822
 
 [node name="personnages" type="Node2D" parent="Planete"]
 

@@ -9,6 +9,7 @@
 collision_layer = 16
 collision_mask = 9
 script = ExtResource("1_5ppv3")
+peuple = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_fy5nd")

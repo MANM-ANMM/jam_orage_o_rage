@@ -11,7 +11,7 @@ func _physics_process(delta):
 
 
 func _on_body_entered(body):
-	if body.has_method("subir_degats") and body.peuple == peuple:
+	if body.has_method("subir_degats") and body.peuple != peuple:
 		body.subir_degats(1)
 	queue_free()
 	

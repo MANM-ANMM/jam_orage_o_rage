@@ -9,7 +9,7 @@ func _ready():
 	visible = false
 
 func start(gpos):
-	var end_point = (gpos - global_position).rotated(-global_rotation)
+	var end_point = (gpos - global_position).rotated(-global_rotation) / scale.x
 	collision_shape_foudre.position = end_point
 	collision_shape_foudre.disabled = false
 	
