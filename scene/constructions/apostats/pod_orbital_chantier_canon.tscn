@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://ce5vmbunw7qrm"]
+
+[ext_resource type="Script" path="res://script/constructions/pod_orbital_canon.gd" id="1_85gug"]
+[ext_resource type="PackedScene" uid="uid://ny5mb0q7nfuf" path="res://scene/constructions/apostats/chantier_canon.tscn" id="2_dcht3"]
+[ext_resource type="Texture2D" uid="uid://jqcmlo82sqy4" path="res://sprite/construction/canon/0.png" id="3_77cit"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mo40i"]
+radius = 14.0
+
+[node name="PodOrbitalChantierCanon" type="CharacterBody2D"]
+collision_layer = 0
+script = ExtResource("1_85gug")
+chantier = ExtResource("2_dcht3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -14)
+shape = SubResource("CircleShape2D_mo40i")
+
+[node name="0" type="Sprite2D" parent="."]
+position = Vector2(0, -25)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("3_77cit")
