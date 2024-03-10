@@ -14,10 +14,16 @@ var sens :float= [1].pick_random()
 
 func _ready():
 	sprite.frame_coords = Vector2i(randi_range(0, sprite.hframes-1), 0)
-
+	
 	var tween = get_tree().create_tween()
+	
+	var altitude :Node2D= $altitude
 	var dest := Vector2(0, hauteur_nuages*(1+speed+randf_range(-0.01, 0.01)))
-	tween.tween_property($altitude, "position", dest, 0.8)
+	tween.tween_property(altitude, "position", dest, 0.8)
+	
+	var scale_final := altitude.scale
+	altitude.scale = Vector2.ZERO
+	tween.parallel().tween_property(altitude, "scale", scale_final, 0.6)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

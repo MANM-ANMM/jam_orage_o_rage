@@ -5,3 +5,4 @@ func _ready():
 	Nodes.node_personnages = $Planete/personnages
 	Nodes.node_batiments = $Planete/batiments
 	Nodes.node_nuages = $Planete/nuages
+	

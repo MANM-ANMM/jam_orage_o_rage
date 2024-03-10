@@ -35,7 +35,10 @@ scene_personnage = ExtResource("5_3mbxn")
 wait_time = 17.0
 scene_personnage = ExtResource("6_cyb55")
 
-[node name="GenerateurNuages" parent="." index="5" instance=ExtResource("6_m15nj")]
+[node name="boutChemine" type="Node2D" parent="." index="5"]
+position = Vector2(-7, -48)
+
+[node name="GenerateurNuages" parent="boutChemine" index="0" instance=ExtResource("6_m15nj")]
 wait_time = 8.0
 
 [node name="LimitateurSpawn" parent="." index="6" node_paths=PackedStringArray("spawners") instance=ExtResource("8_yy5fp")]
